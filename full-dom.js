@@ -420,5 +420,18 @@ section.addEventListener("click", event => {
 // to playe only one event listener that can be used to access many nested elements
 
 
+// EventObject
+// To properly handle an event we'd want to know more about what's happened. Not just a "click" or "keydown", but 
+// which key was presed and so on.
+//   * When an even happens, the browser creates an event object, puts details into it and passes it as an argument to the handler
 
-
+// <input type="button" value="Click me" id="elem">
+// getting pointer coordinates from the event object
+elem.onclick = function(event) {
+  alert(event.type + " at " + event.currentTarget)
+  alert("Coordinates: " + event.clientX + ":" + event.clientY)
+}
+// event.type: here it's click
+// event.currentTarget: element that handled the event, exactly the same as `this` unless the handler is an arrow function
+// event.clientX / event.clientY: window-relative coordinates of the cursor, for pointer events
+// There are more properties. May of them depend on the event type: keyboard events have one set of properties, pointer event another one
