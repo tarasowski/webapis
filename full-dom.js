@@ -194,7 +194,7 @@ tiger.previousElementSibling.style.background = "aquamarine"
 // Make Changes to the DOM
 // ***************************
 
-// In a static website, elements are added tot he page by directly writing HTML in an `.html` file
+// In a static website, elements are added to the page by directly writing HTML in an `.html` file
 // In a dynamic web app, elements and text are often added with JavaScript
 // The creteElement() and createTextNode() methods are used to create a new nodes in the DOM
 // createElement() -> create a new element node
